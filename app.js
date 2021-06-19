@@ -131,7 +131,7 @@ app.get("/callback", (req, res) => {
     );
 });
 
-server_port = process.argv.slice(2)[0]
+server_port = process.env.PORT || 80
 app.listen(server_port, () => {
     console.log(`App listening at http://localhost:${server_port}`);
 });
