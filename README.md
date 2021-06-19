@@ -11,6 +11,7 @@ npm install os
 npm install os-utils
 npm install oauth
 npm install util
+npm install marked
 ```
 
 #### Building in Heroku ####
