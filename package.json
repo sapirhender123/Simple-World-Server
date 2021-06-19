@@ -2,6 +2,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "marked": "^2.1.1",
     "oauth": "^0.9.15",
     "os-utils": "0.0.14",
     "sys": "^0.0.1",
