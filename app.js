@@ -21,7 +21,7 @@ app.get("/health", function (req, res) {
     }
 
     cpuUsage(function (v) {
-        json_response = {
+        var json_response = {
             "OS name": process.platform,
             "Language/platform version": process.versions.node,
             "Memory usage of your machine":
