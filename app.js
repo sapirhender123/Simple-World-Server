@@ -4,13 +4,13 @@ import { totalmem, freemem } from "os";
 import { OAuth } from "oauth";
 import util from "util";
 import readline from "readline";
+import { env } from "process";
 
 var server_port;
 const twitter_api = "https://api.twitter.com/1.1/search/tweets.json?q=";
 // Define the user key and user secret in order to do authentication with twitter servers
-const _twitterConsumerKey = "4b7vkfQcVJ6jMXmmG1YXDACP4";
-const _twitterConsumerSecret =
-    "ybb9jxCs8UVGRRy8dTxBFDBLtjclA94QKFHrThwUzIsmU7qejZ";
+const _twitterConsumerKey = process.env.TWITTER_API_KEY;
+const _twitterConsumerSecret = process.env.TWITTER_API_SECRET_KEY;
 
 
 const app = express();
@@ -53,7 +53,7 @@ function consumer() {
         _twitterConsumerKey,
         _twitterConsumerSecret,
         "1.0A",
-        `http://127.0.0.1:${server_port}/callback`, // define the request to connection
+        process.env.CALLBACK_URL || `http://127.0.0.1:${server_port}/callback`, // define the request to connection
         "HMAC-SHA1"
     );
 }
