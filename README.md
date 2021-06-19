@@ -32,7 +32,7 @@ In addition, you have to get into the setting of the project and add in CALLBACK
 ##### Locally #####
 write in the terminal
 ```bash
-export PORT=<...> CALLBACK_URL=<...> TWITTER_API_KEY=<...> TWITTER_API_SECRET_KEY=<...> node app.js
+PORT=<...> CALLBACK_URL=<...> TWITTER_API_KEY=<...> TWITTER_API_SECRET_KEY=<...> node app.js
 ```
 
 ##### Docker #####
@@ -41,7 +41,7 @@ Write in the terminal (in the appropriate path):
 
 ```bash
 docker build . -t server_node
-docker run -e PORT=<...> -e CALLBACK_URL=<...> -e TWITTER_API_KEY = <...> -e TWITTER_API_SECRET_KEY <...> server_node
+docker run -p <PORT:PORT> -e PORT=<...> -e CALLBACK_URL="<...>" -e TWITTER_API_KEY ="<...>" -e TWITTER_API_SECRET_KEY "<...>" server_node
 ```
 
 #### Running in Heroku ####
@@ -53,7 +53,8 @@ heroku open
 ```
 
 ##### Running the Client #####
-You have to write in your browser "localhost:<port>/ if running locally. If running in Heroku, visit `https://<heroku-app-name>.herokuapp.com/`. <br />
+Locally and also in the Docker, you have to write in your browser "localhost:<port>/
+If running in Heroku, visit `https://<heroku-app-name>.herokuapp.com/`. <br />
 In user name you have to put the name of the user you want to see his 10 recent tweets (for example: nasa, LindseyStirling).
 
 
