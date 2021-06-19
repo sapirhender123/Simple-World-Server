@@ -34,7 +34,7 @@ In user name you have to put the name of the user you want to see his 10 recent 
 Install docker-desktop from [here](https://www.docker.com/products/docker-desktop) and open it.
 Write in the terminal (in the appropriate path):
 ```bash
-docker build . -t server
+docker build . -t server_node
 docker run -p 3000:3000 server_node
 ```
 but if you want to run the app from the docker-file again, you need to write
