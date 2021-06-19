@@ -44,7 +44,7 @@ docker build . -t server_node
 docker run -p <PORT:PORT> -e PORT=<...> -e CALLBACK_URL="<...>" -e TWITTER_API_KEY ="<...>" -e TWITTER_API_SECRET_KEY "<...>" server_node
 ```
 
-#### Running in Heroku ####
+##### Heroku #####
 Download Heroku CLI [here](https://devcenter.heroku.com/articles/heroku-cli)
 
 ```bash
