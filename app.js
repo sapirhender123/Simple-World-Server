@@ -7,6 +7,7 @@ import readline from "readline";
 import { env } from "process";
 import { readFileSync } from 'fs';
 import marked from 'marked';
+import * as path from 'path';
 
 var server_port;
 const twitter_api = "https://api.twitter.com/1.1/search/tweets.json?q=";
@@ -23,7 +24,7 @@ const __dirname = dirname(__filename)
 const app = express();
 
 app.get('/', function(req, res) { // handle empty request
-  var path = __dirname + '\\README.md';
+  var path = path.join(__dirname, 'README.md')
   var file = readFileSync(path, 'utf8');
   res.send(marked(file.toString()));
 });
