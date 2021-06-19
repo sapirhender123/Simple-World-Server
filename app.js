@@ -2,9 +2,10 @@ import express from "express";
 import { cpuUsage } from "os-utils";
 import { totalmem, freemem } from "os";
 import { OAuth } from "oauth";
-import util from "util"
+import util from "util";
+import readline from "readline";
 
-const server_port = 3000;
+var server_port;
 const twitter_api = "https://api.twitter.com/1.1/search/tweets.json?q=";
 // Define the user key and user secret in order to do authentication with twitter servers
 const _twitterConsumerKey = "4b7vkfQcVJ6jMXmmG1YXDACP4";
@@ -130,7 +131,7 @@ app.get("/callback", (req, res) => {
     );
 });
 
-
+server_port = process.argv.slice(2)[0]
 app.listen(server_port, () => {
     console.log(`App listening at http://localhost:${server_port}`);
 });

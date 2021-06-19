@@ -9,4 +9,4 @@ RUN npm install
 
 COPY app.js app.js
  
-CMD [ "node", "app.js" ]
+CMD [ "node", "app.js", "$PORT"]
