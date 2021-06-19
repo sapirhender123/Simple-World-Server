@@ -56,8 +56,7 @@ heroku open
 [link to my live API on Heroku](https://recent-tweets-2021.herokuapp.com/)
 
 ##### Running the Client #####
-Locally and also in the Docker, you have to write in your browser "localhost:<port>/
-If running in Heroku, visit `https://<heroku-app-name>.herokuapp.com/`. <br />
-In user name you have to put the name of the user you want to see his 10 recent tweets (for example: nasa, LindseyStirling).
+Locally and in the Docker, go to `localhost:<port>/`. To visit the site hosted by Heroku, visit `https://<heroku-app-name>.herokuapp.com/`.
+For example, visit "/tweet?query=<username>" if you want to see the 10 recent tweets of a specific user (nasa, LindseyStirling, etc).
 
 
