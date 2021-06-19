@@ -52,6 +52,8 @@ git push heroku main
 heroku open
 ```
 
+[link to my live API on Heroku](https://recent-tweets-2021.herokuapp.com/)
+
 ##### Running the Client #####
 Locally and also in the Docker, you have to write in your browser "localhost:<port>/
 If running in Heroku, visit `https://<heroku-app-name>.herokuapp.com/`. <br />
